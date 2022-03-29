@@ -1,0 +1,14 @@
+redhat 8.4 최소설치 후 
+yum repo 등록
+#subscription-manager register --username <id> --password <password> --auto-attach
+
+yum업데이트
+#yum update -y 
+
+vm생성 전 네트워크 생성
+#virt-manager
+external    NAT         172.168.16.0/24
+provision   host-only   192.168.10.0/24
+internalAPI host-only   192.168.20.0/24
+ternet      host-only   192.168.30.0/24
+storage     host-only   192.168.40.0/24
